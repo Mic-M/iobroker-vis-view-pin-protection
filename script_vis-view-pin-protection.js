@@ -4,7 +4,7 @@
  * ---------------------------
  * Autor: Mic
  * 0.1 - initial version
- * Angelehnt an: https://forum.iobroker.net/viewtopic.php?t=2850
+ * Support: https://forum.iobroker.net/viewtopic.php?f=30&t=19871
  ******************************************************************************/
 
 /*******************************************************************************
