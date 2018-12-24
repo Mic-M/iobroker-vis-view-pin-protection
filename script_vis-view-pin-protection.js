@@ -86,7 +86,7 @@ function main() {
     for (var i = 0; i < PIN_VIEWS.length; i++) {
         on({id: STATE_PATH + PIN_VIEWS[i].name + '.CurrentKey', change: "any"}, function (obj) {
             var currView = obj.id.substr(STATE_PATH.length).split(".")[0]; // get View Name simply from obj.id
-            if(LOGGING) if(obj.state.val != '') log('Eingabe über Tastenfeld: ' + obj.state.val + ', Viewname: ' + currView);
+            if(LOGGING) if(obj.state.val !== '') log('Eingabe über Tastenfeld: ' + obj.state.val + ', Viewname: ' + currView);
             switch(obj.state.val) {
                 case 0: case 1: case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9:
                     G_LastKeyPressed[currView] = obj.state.val;
