@@ -3,7 +3,9 @@
  * Pin-Schutz für VIS-View
  * ---------------------------
  * Autor: Mic
- * 0.1 - initial version
+ * Change Log
+ *  - 0.2 - Fix: 0 on keypad was not recognized
+ *  - 0.1 - initial version
  * Support: https://forum.iobroker.net/viewtopic.php?f=30&t=19871
  ******************************************************************************/
 
@@ -86,7 +88,7 @@ function main() {
             var currView = obj.id.substr(STATE_PATH.length).split(".")[0]; // get View Name simply from obj.id
             if(LOGGING) if(obj.state.val != '') log('Eingabe über Tastenfeld: ' + obj.state.val + ', Viewname: ' + currView);
             switch(obj.state.val) {
-                case 1: case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9:
+                case 0: case 1: case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9:
                     G_LastKeyPressed[currView] = obj.state.val;
                     userEnteredNumber(currView);
                     break;
